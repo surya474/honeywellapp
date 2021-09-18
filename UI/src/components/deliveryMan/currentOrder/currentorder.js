@@ -43,7 +43,7 @@ const CurrentOrder = (props) => {
     return(<>
         <Userinfo currentOrder ={currentOrder} showDirections = { () => setShowDirections(true)} stopDirections={()=> setShowDirections(false) } delivered={onDeliver}/>
 
-        {showDirections ? <Direction /> : <CurrentLocation /> }
+        {showDirections ? <Direction currentOrder={currentOrder} /> : <CurrentLocation /> }
       </>
   )
    }
